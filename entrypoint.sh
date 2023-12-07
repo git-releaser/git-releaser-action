@@ -3,11 +3,6 @@
 # Change the working directory to GITHUB_WORKSPACE
 cd "${GITHUB_WORKSPACE}" || { echo "Failed to change directory to ${GITHUB_WORKSPACE}"; exit 1; }
 
-pwd
-
-ls -la .
-git status
-
 # Check if the necessary inputs are set
 if [ -z "${INPUT_REPOSITORY}" ]; then
   echo "INPUT_REPOSITORY is not set. Exiting."
