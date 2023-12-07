@@ -16,7 +16,8 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/git-releaser/git-releaser:dev-202312070426'
   args:
-    - git-releaser update
+    - git-releaser
+    - update
     - -r ${{ inputs.repository }}
     - -u ${{ inputs.actor }}
     - -t ${{ inputs.token }}
