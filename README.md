@@ -5,7 +5,7 @@ Runs [git-releaser](https://github.com/git-releaser/git-releaser) to create a re
 ## Usage
 
 ```yaml
-- uses: git-releaser/git-releaser-action@v1
+- uses: git-releaser/git-releaser-action@v0.1.0
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
 ```
