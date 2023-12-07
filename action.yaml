@@ -1,0 +1,17 @@
+name: 'Git Releaser'
+description: 'Runs git-releaser'
+
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/git-releaser/git-releaser:dev-202312070426'
+  args:
+    - /git-releaser update
+    - -r https://github.com/${{ github.repository }}
+    - -u ${{ github.actor }}
+    - -t ${{ secrets.GITHUB_TOKEN }}
+    - -p ${{ github.repository }}
+    - -g "github"
