@@ -5,6 +5,9 @@ cd "${GITHUB_WORKSPACE}" || { echo "Failed to change directory to ${GITHUB_WORKS
 
 pwd
 
+ls -la .
+git status
+
 # Check if the necessary inputs are set
 if [ -z "${INPUT_REPOSITORY}" ]; then
   echo "INPUT_REPOSITORY is not set. Exiting."
