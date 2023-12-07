@@ -24,5 +24,7 @@ if [ -z "${INPUT_TOKEN}" ]; then
   exit 1
 fi
 
+env
+
 # Run the git-releaser update command
 /git-releaser update -r "${INPUT_REPOSITORY}" -u "${INPUT_ACTOR}" -t "${INPUT_TOKEN}" -p "${INPUT_REPOSITORY}" -g 'github' || { echo "Failed to run git-releaser update command"; exit 1; }
