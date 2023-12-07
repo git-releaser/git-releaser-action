@@ -26,6 +26,9 @@ fi
 
 git pull
 
+git tag
+
+git log
 
 # Run the git-releaser update command
 /git-releaser update -r "${GITHUB_REPOSITORY}" -u "${GITHUB_ACTOR}" -t "${INPUT_TOKEN}" -p "https://github.com/${GITHUB_REPOSITORY}" -g 'github' || { echo "Failed to run git-releaser update command"; exit 1; }
