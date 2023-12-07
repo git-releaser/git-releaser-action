@@ -27,4 +27,4 @@ fi
 env
 
 # Run the git-releaser update command
-/git-releaser update -r "${INPUT_REPOSITORY}" -u "${INPUT_ACTOR}" -t "${INPUT_TOKEN}" -p "${INPUT_REPOSITORY}" -g 'github' || { echo "Failed to run git-releaser update command"; exit 1; }
+/git-releaser update -r "${GITHUB_REPOSITORY}" -u "${GITHUB_ACTOR}" -t "${INPUT_TOKEN}" -p "https://github.com/${GITHUB_REPOSITORY}" -g 'github' || { echo "Failed to run git-releaser update command"; exit 1; }
