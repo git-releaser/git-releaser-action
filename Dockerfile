@@ -1,5 +1,5 @@
 # Use the original image as a base
-FROM ghcr.io/git-releaser/git-releaser:dev-202312070607
+FROM ghcr.io/git-releaser/git-releaser:dev-202312070727 
 
 # Copy the entrypoint script into the Docker image
 COPY entrypoint.sh /entrypoint.sh
