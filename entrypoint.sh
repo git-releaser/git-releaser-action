@@ -4,12 +4,12 @@
 cd "${GITHUB_WORKSPACE}" || { echo "Failed to change directory to ${GITHUB_WORKSPACE}"; exit 1; }
 
 # Check if the necessary inputs are set
-if [ -z "${INPUT_REPOSITORY}" ]; then
-  echo "INPUT_REPOSITORY is not set. Exiting."
+if [ -z "${GITHUB_REPOSITORY}" ]; then
+  echo "GITHUB_REPOSITORY is not set. Exiting."
   exit 1
 fi
 
-if [ -z "${INPUT_ACTOR}" ]; then
+if [ -z "${GITHUB_ACTOR}" ]; then
   echo "INPUT_ACTOR is not set. Exiting."
   exit 1
 fi
